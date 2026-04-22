@@ -1,15 +1,49 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const fkDisplayFont = localFont({
+  src: [{
+    path: './_shared/assets/fonts/fk-display/FKDisplay-RegularAlt.woff2',
+    weight: '300'
+  },
+  ],
+  variable: '--font-fk-display-alt',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const suisseFont = localFont({
+  src: [
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Black.woff2',
+      weight: '900'
+    },
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Bold.woff2',
+      weight: '700'
+    },
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Light.woff2',
+      weight: '200'
+    },
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Medium.woff2',
+      weight: '500'
+    },
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Regular.woff2',
+      weight: '400'
+    },
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Semibold.woff2',
+      weight: '600'
+    },
+    {
+      path: './_shared/assets/fonts/suisse-intl/SuisseIntl-Thin.woff2',
+      weight: '100'
+    },
+  ],
+  variable: "--font-suisse-font",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fkDisplayFont.variable} ${suisseFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
