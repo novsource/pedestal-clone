@@ -29,6 +29,9 @@
       "~ui/*": [
         "./app/_shared/components/common-ui/*"
       ],
+      "~types/*": [
+        "./app/_shared/types/*"
+      ],
     }
   },
   "include": [
