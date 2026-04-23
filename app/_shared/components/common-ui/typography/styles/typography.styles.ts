@@ -5,7 +5,7 @@ export const textVariants = tv({
   variants: {
     asParagraph: {
       true: '',
-      false: 'tracking-[-0.01rem]'
+      false: 'tracking-[-0.02rem]'
     }
   }
 })
